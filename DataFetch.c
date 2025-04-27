@@ -16,14 +16,17 @@ int main()
     FILE *fin, *fout;
     
     // Open input file in binary read mode
-    fin = fopen("Maxtemp_MaxT_2023.GRD", "rb");
+    // Place the grid file dowloaded in the base folder
+    fin = fopen("pathtoMaxtempgridfile", "rb");
     if (fin == NULL) {
         fprintf(stderr, "Error: Cannot open input file 'Maxtemp_MaxT_2023.GRD'\n");
         return EXIT_FAILURE;
     }
     
     // Open output file in text write mode
-    fout = fopen("IND010123MaxTemp.TXT", "w");
+    // Extracting temperature data(In our case is 1st Jan 2023)
+    // Create a folder named actual_data to store parsed daily max temperature txt files
+    fout = fopen("actual_data/IND010123MaxTemp.TXT", "w");
     if (fout == NULL) {
         fprintf(stderr, "Error: Cannot open output file 'India2023Temp.TXT'\n");
         fclose(fin);
