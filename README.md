@@ -34,7 +34,7 @@ To visualize model performance:
 
 ## Repository Structure 📁
 
-- `fourcastnetv2.ipynb`: Main notebook for generating weather forecasts
+- `FourCastv2.ipynb`: Main notebook for generating weather forecasts
 - `metData.ipynb`: Notebook for meteorological data processing and visualization
 - `DataFetch.c`: C program to parse data from grid temperature file obtained from IMD pune website
 
